@@ -217,6 +217,9 @@ message HttpConnectionManager {
     // used to populate the tag value. The tag is created if the specified
     // header name is present in the request’s headers.
     repeated string request_headers_for_tags = 2;
+
+    // Whether to use OpenTracing conformant span tags
+    google.protobuf.BoolValue use_opentracing_tags = 3;
   }
   Tracing tracing = 7;
 
